@@ -1,3 +1,10 @@
+#Data
+nyse_stocks.csv
+
+#History Files
+.Rhistory
+.Rapp.history
+
 # History files
 .Rhistory
 .Rapp.history

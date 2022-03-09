@@ -1,6 +1,8 @@
 
+library(shinythemes)
 
 ui <- fluidPage(
+  #shinytheme("superhero"),
   selectInput(
     inputId =  'selected_stock',
     label = "Select Stock",
@@ -25,3 +27,5 @@ ui <- fluidPage(
   plotOutput('ts_plot')
   
 )
+
+

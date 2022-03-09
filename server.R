@@ -11,9 +11,11 @@ server <- function(input, output) {
     
     plot_df <- plot_df[ ,c('date', 'symbol', input$selected_metric) ]
     autoplot(plot_df)
-    
   })
-  
 }
+
+
+
+
 
 

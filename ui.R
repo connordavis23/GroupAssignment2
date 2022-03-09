@@ -1,6 +1,7 @@
 
 
 ui <- fluidPage(
+ sidebarPanel(  
   selectInput(
     inputId =  'selected_stock',
     label = "Select Stock",
@@ -8,9 +9,10 @@ ui <- fluidPage(
   ),
   
   selectInput(
-    inputId = 'selected_metric',
-    label = 'Select Metric',
-    choices = names(metrics)
+    inputId = 'selected_sector',
+    label = 'Select Sector',
+    multiple = TRUE,
+    choices = names(stocks$gics_sector)
   ),
   
   dateRangeInput(
@@ -20,8 +22,10 @@ ui <- fluidPage(
     end = max(stocks$date),
     min = min(stocks$date),
     max = max(stocks$date)
-  ),
-  
-  plotOutput('ts_plot')
-  
+  )),
+ mainPanel(
+  plotOutput('ts_plot'))
 )
+
+
+

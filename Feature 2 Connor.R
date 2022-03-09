@@ -1,3 +1,7 @@
+#Candlestick Plot w/ Table of stock data where you select stock ticker, starting date, by different day breaks
+
+
+
 library(shiny)
 
 ui <- fluidPage(
@@ -13,7 +17,7 @@ ui <- fluidPage(
                   "Day Break:",
                   choices = c("1 Day", "1 Week",
                               "1 Month", "1 Year")),
-      actionButton("go_button", "GO!", class = "btn-block")
+      actionButton("go_button", "GO!")
     ),
     mainPanel(
       plotOutput("candleplot", brush = "plot_brush"),
@@ -21,6 +25,8 @@ ui <- fluidPage(
       )
     )
   )
+
+
 
 server <- function(input, output, session) {
   
